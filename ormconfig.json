@@ -1,0 +1,20 @@
+[
+  {
+    "name": "testing",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "852147",
+    "database": "nextjs-todo-test"
+  },
+  {
+    "name": "development",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "852147",
+    "database": "nextjs-todo"
+  }
+]
