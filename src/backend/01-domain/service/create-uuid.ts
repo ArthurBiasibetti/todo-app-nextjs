@@ -1,3 +1,3 @@
-export interface ICreateUUIDService {
+export interface IUUIDService {
   create(): string
 }

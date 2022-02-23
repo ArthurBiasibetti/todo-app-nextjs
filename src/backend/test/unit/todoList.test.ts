@@ -1,6 +1,6 @@
 import TodoItem from "../../01-domain/entity/todo-item"
 import TodoList from "../../01-domain/entity/todo-list"
-import CryptoUUIDService from "../../03-framework/services/create-uuid"
+import CryptoUUIDService from "../../04-framework/services/crypto-uuid"
 
 describe('Test Todo List Entity', function () {
   test('Should todo list was defined', function () {
