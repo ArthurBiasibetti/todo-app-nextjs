@@ -1,7 +1,7 @@
 import {createConnection, getConnection, Connection} from 'typeorm';
 
 export default class TypeORMConnection {
-  constructor(readonly name: string) {}
+  constructor(readonly name: string = 'default') {}
   
   async create(){
     await createConnection(this.name);
@@ -9,7 +9,7 @@ export default class TypeORMConnection {
   }
 
   async getConn(): Promise<Connection> {
-    return getConnection()
+    return getConnection(this.name)
   }
 
   async close(){
@@ -20,7 +20,6 @@ export default class TypeORMConnection {
   async clear(){
     const connection = getConnection(this.name);
     const entities = connection.entityMetadatas;
-
     entities.forEach(async (entity) => {
       const repository = connection.getRepository(entity.name);
       await repository.query(`DELETE FROM ${entity.tableName}`);

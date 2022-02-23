@@ -6,15 +6,35 @@
     "port": 5432,
     "username": "postgres",
     "password": "852147",
-    "database": "nextjs-todo-test"
+    "database": "nextjs-todo-test",
+    "migrations": [
+      "src/backend/03-framework/typeorm/migrations/*.ts"
+    ],
+    "entities": [
+      "src/backend/03-framework/typeorm/entity/*.ts"
+    ],
+    "cli": {
+      "migrationsDir": "src/backend/03-framework/typeorm/migrations",
+      "entitiesDir": "src/backend/03-framework/typeorm/entity"
+    }
   },
   {
-    "name": "development",
+    "name": "default",
     "type": "postgres",
     "host": "localhost",
     "port": 5432,
     "username": "postgres",
     "password": "852147",
-    "database": "nextjs-todo"
+    "database": "nextjs-todo",
+    "migrations": [
+      "src/backend/03-framework/typeorm/migrations/*.ts"
+    ],
+    "entities": [
+      "src/backend/03-framework/typeorm/entity/*.ts"
+    ],
+    "cli": {
+      "migrationsDir": "src/backend/03-framework/typeorm/migrations",
+      "entitiesDir": "src/backend/03-framework/typeorm/entity"
+    }
   }
 ]

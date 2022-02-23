@@ -1,11 +1,11 @@
 import TodoItem from "../entity/todo-item";
 
-export interface IInputCreateTodoListDTO{
+export interface IInputCreateTodoListDTO {
   name: string
   items: string[]
 }
 
-export interface IOutputCreateTodoListDTO{
+export interface IOutputCreateTodoListDTO {
   id: string
   name: string
   items: TodoItem[]
