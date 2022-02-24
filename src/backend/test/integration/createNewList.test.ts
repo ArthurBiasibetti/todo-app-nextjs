@@ -1,14 +1,12 @@
 import { Repository } from 'typeorm'
 import CreateTodoListUsecase from '../../02-application/usecase/create-todo-list'
 import CryptoUUIDService from '../../04-framework/services/crypto-uuid'
-import FakeDatabaseConnection from '../mocks/database/fake-database-connection'
 import FakeTodoItemRepository from '../mocks/repository/fake-todo-item'
 import FakeTodoListRepository from '../mocks/repository/fake-todo-list'
 
 describe('Create new list use case', function () {
-  const databaseConnection = new FakeDatabaseConnection()
-  const todoListRepository = new FakeTodoListRepository(databaseConnection)
-  const todoItemRepository = new FakeTodoItemRepository(databaseConnection)
+  const todoListRepository = new FakeTodoListRepository()
+  const todoItemRepository = new FakeTodoItemRepository()
   test('List should be defined with three items', async function () {
     const input = {
       name: 'Lista 01',

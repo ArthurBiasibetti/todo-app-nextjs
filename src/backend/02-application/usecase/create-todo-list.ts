@@ -29,20 +29,7 @@ export default class CreateTodoListUsecase {
       )
       todoList.addItem(todoItem)
     })
-    // const items = []
-    // if (todoList.items.length) {
-    //   for (const item of todoList.items) {
-    //     const { id, name, isChecked, listId } = item
-    //     items.push(
-    //       todoItemEntity.create({
-    //         id,
-    //         name,
-    //         checked: isChecked.bind(item)(),
-    //         list_id: listId,
-    //       })
-    //     )
-    //   }
-    // }
+    
     await this.todoListRepository.write(todoList, { transaction: true })
     await this.todoItemRepository.write(todoList.items, { transaction: true })
 

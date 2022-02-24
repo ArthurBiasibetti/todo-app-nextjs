@@ -2,7 +2,7 @@ import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn } from "typeorm";
 import { TodoListEntity } from "./todo-list";
 
 @Entity('todo_item')
-export class TodoItemEntity {
+export default class TodoItemEntity {
   @PrimaryColumn('uuid')
   id: string
 
