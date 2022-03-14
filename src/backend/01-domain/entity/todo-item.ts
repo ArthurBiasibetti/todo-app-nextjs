@@ -1,4 +1,4 @@
-import { ICreateUUIDService } from "../service/create-uuid"
+import { IUUIDService } from "../service/create-uuid"
 
 interface ITodoItem {
   name: string
@@ -12,7 +12,7 @@ export default class TodoItem {
   private checked: boolean
   readonly listId: string
 
-  constructor(input: ITodoItem, createUUIDService: ICreateUUIDService) {
+  constructor(input: ITodoItem, createUUIDService: IUUIDService) {
     this.id = input.uuid || createUUIDService.create()
     this.name = input.name
     this.checked = false

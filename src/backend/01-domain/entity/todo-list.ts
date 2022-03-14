@@ -1,4 +1,4 @@
-import { ICreateUUIDService } from "../service/create-uuid";
+import { IUUIDService } from "../service/create-uuid";
 import TodoItem from "./todo-item";
 
 interface ITodoList {
@@ -11,8 +11,8 @@ export default class TodoList {
   name: string
   items: TodoItem[]
 
-  constructor(input: ITodoList, createUUIDService: ICreateUUIDService){
-    this.id = input.uuid || createUUIDService.create()
+  constructor(input: ITodoList, UUIDService: IUUIDService){
+    this.id = input.uuid || UUIDService.create()
     this.name = input.name
     this.items = []
   }
